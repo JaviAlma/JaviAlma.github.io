@@ -39,6 +39,15 @@
     </item>
     
     <item>
+      <title>Encargo 1</title>
+      <link>https://JaviAlma.github.io/docs/encargo-1/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://JaviAlma.github.io/docs/encargo-1/</guid>
+      <description>Uso de los Shortcodes para agregar contenido en el sitio de documentación.</description>
+    </item>
+    
+    <item>
       <title>Ejemplos Markdown</title>
       <link>https://JaviAlma.github.io/docs/markdown/</link>
       <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
