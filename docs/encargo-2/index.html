@@ -286,25 +286,65 @@
 <div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
 				<div class="box">
 				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('https://JaviAlma.github.io//img/galeriafresia//fresia.png');" >
-				      <img itemprop="thumbnail" src="https://JaviAlma.github.io//img/galeriafresia//fresia.png" alt="Fresia" />
+				    <div class="img" style="background-image: url('https://JaviAlma.github.io//img/galeriafresia//fresia.1.png');" >
+				      <img itemprop="thumbnail" src="https://JaviAlma.github.io//img/galeriafresia//fresia.1.png" alt="Fresia" />
 				    </div>
 			      <figcaption>
 		          <p>Fresia</p>
 			      </figcaption>
-				    <a href="https://JaviAlma.github.io//img/galeriafresia//fresia.png" itemprop="contentUrl"></a>
+				    <a href="https://JaviAlma.github.io//img/galeriafresia//fresia.1.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://JaviAlma.github.io//img/galeriafresia//fresia.2.png');" >
+				      <img itemprop="thumbnail" src="https://JaviAlma.github.io//img/galeriafresia//fresia.2.png" alt="Fresia" />
+				    </div>
+			      <figcaption>
+		          <p>Fresia</p>
+			      </figcaption>
+				    <a href="https://JaviAlma.github.io//img/galeriafresia//fresia.2.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://JaviAlma.github.io//img/galeriafresia//fresia.3.png');" >
+				      <img itemprop="thumbnail" src="https://JaviAlma.github.io//img/galeriafresia//fresia.3.png" alt="Fresia" />
+				    </div>
+			      <figcaption>
+		          <p>Fresia</p>
+			      </figcaption>
+				    <a href="https://JaviAlma.github.io//img/galeriafresia//fresia.3.png" itemprop="contentUrl"></a>
 				  </figure>
 				</div>
 </div>
  
 
 
+ <div>
+    <iframe 
+    src="https://alumnos2152.autodesk360.com/shares/public/SH56a43QTfd62c1cd968e55e7b94ad82364e?mode=embed" 
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
+
 </p>
-<p>A partir de una silla se mostrará la manera de simular un corte con fresa de 6 mm CNC de 3 ejes en Fusion 360.</p>
-<h6 id="paso-1">Paso 1</h6>
-<p>Con la herramienta Create Sketch hacemos un cuadrado de 1.220 mm por lado y extruimos la figura con un espesor de 15mm, esta plancha de terciado será nuestra área de corte. Posteriormente copiamos las partes de la silla que querramos cortar. Estas partes deben alinearse de tal forma que las caras caladas miren hacia arriba.</p>
+<p>A partir de una la silla mostrada anteriormente se presentará la manera de simular un corte con fresa de 6 mm CNC de 3 ejes en Fusion 360.</p>
+<h6 id="paso-1---creación-plancha-de-corte">Paso 1 - Creación plancha de corte</h6>
+<p>Con la herramienta <strong>Create Sketch</strong> hacemos un cuadrado de <strong>1.220 mm</strong> por lado y extruimos la figura con un espesor de <strong>15mm</strong>, esta plancha de terciado será nuestra área de corte.</p>
+<p>Posteriormente copiamos las partes de la silla que querramos cortar.</p>
 <ul>
-<li>Todo esto se realiza en el espacio de trabajo de Diseño</li>
+<li>
+<p>Estas partes deben alinearse de tal forma que las caras caladas miren hacia arriba.</p>
+</li>
+<li>
+<p>Todo esto se realiza en el espacio de trabajo de Diseño</p>
+</li>
 </ul>
 <div>
     <video 
@@ -356,16 +396,67 @@
 
 
 </p>
-<h5 id="paso-2">Paso 2</h5>
-<p>A continuación un ejemplo de corte realizado a las dos patas traseras de la silla
+<h5 id="paso-2---elegir-herramienta-de-corte-y-área-a-mecanizar">Paso 2 - Elegir herramienta de corte y área a mecanizar</h5>
+<p>Cambiamos el espacio de trabajo a <strong>manufactura</strong>, con la herramienta de <strong>set up</strong> escogemos la máquina para cortar, esta será una <strong>Autodesk CNC de 3 ejes genérica</strong>.</p>
+<p>Luego definiremos nuestra plancha construida en la pestaña de stock, stock from solid y seleccionaremos las piezas que queremos cortar.</p>
+<p>Finalmente el modelo de orientación a seleccionar será Select Z axis/plane &amp; X axis, definiremos en la tabla los que serán nuestros puntos Z (plano superior), X (lateral) y el punto de origen (punto superior izquierdo).</p>
 <div>
     <video 
     width="100%" 
     height="450" 
     autoplay muted loop controls preload>
-    <source src="/img/mecanizado1.mp4"  type="video/mp4">
+    <source src="/img/paso2.mp4"  type="video/mp4">
+    </video>
+</div>
+<h4 id="paso-3---contour-2d-partes-caladas">Paso 3 - Contour 2D partes caladas</h4>
+<p>Posteriormente relizamos un <strong>Countour 2D</strong>, podemos apagar y prender la plancha para apreciar mejor las piezas.</p>
+<p>Nos acercaremos al modelo y escogeremos el <strong>vector inferior de cada calado</strong>.</p>
+<p>Escogeremos la Fresia que será la herramienta de corte, será una de <strong>6 mm flat end mill</strong>. Aparecerán entonces las líneas de la trayectoría de la fresia para mecanizar.</p>
+<p>Finalmente, agregaremos mayor profundidad en el corte en la sección Passes, Multiple Dephs, Maximum Roughning Stepdown de 3mm que sería la hondura del corte.</p>
+<p><img src="/img/paso3.png" alt="Imagen Simple"></p>
+<p>Podemos simular y visualizar el stock para entender cómo funciona la pieza y ver cómo la fresia recorrerá hasta terminar cada calado.</p>
+<p>A continuación un video de la simulación al tener puesta la opción stock
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/paso3.mp4"  type="video/mp4">
     </video>
 </div></p>
+<h4 id="paso-4---2d-pocket">Paso 4 - 2D Pocket</h4>
+<p>Ahora con la herramienta <strong>2D Pocket</strong> vamos a realizar el corte de las caras de algunas piezas, ya no es necesario escoger la herramienta puesto que se selecciona la misma y se debe realizar nuevamente el paso para generar mayor profundidad en el corte con 3mm.</p>
+<p>En estas caras se generará un pocket si es necesario, esto sería un rebaje en el área de cada pieza.</p>
+<p>Con ello quedaría la siguiente simulación
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/paso4.mp4"  type="video/mp4">
+    </video>
+</div></p>
+<h4 id="paso-5---contour-2d-áreas-exteriores-y-tabs">Paso 5 - Contour 2D áreas exteriores y tabs</h4>
+<p>Este es el último paso para mecanizar las piezas, para ello volveremos a hacer un <strong>contour 2D</strong>, esta vez seleccionando el área exterior de las piezas. Con una profundidad de corte de 3mm.</p>
+<p>El cabezal seguirá la línea de las partes del mecanizado pero es importante asegurar en las opciones de geometría la elección de los <strong>tabs</strong>, que serían pequeñas áreas donde la fresia no generará un mecanizado, osea la herramienta se saltará un espacio de la línea del mecanizado. Todo esto con el fin de que cuando el mecanizado este en su última línea de corte la pieza no se rompa.</p>
+<p>Aumentaremos el <strong>alto de tab a 3mm</strong> y la <strong>distancia entre cada tab será de 350mm</strong> de esta forma nuestras piezas no se romperán cuando se esté por terminar el mecanizado.</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/paso5.mp4"  type="video/mp4">
+    </video>
+</div>
+<h4 id="simulación-en-conjunto-de-los-cortes">Simulación en conjunto de los cortes</h4>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/final.mp4"  type="video/mp4">
+    </video>
+</div>
 <p><a href="#contenido-shortcodes">[Volver Arriba]</a></p>
 
 </div>
