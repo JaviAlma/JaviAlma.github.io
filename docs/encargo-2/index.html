@@ -107,6 +107,10 @@
     </li>
     
     <li class="">
+      <a href="https://JaviAlma.github.io/docs/encargo-3/">3 - Mecanizado 2.5 D del respaldo silla</a>
+    </li>
+    
+    <li class="">
       <a href="https://JaviAlma.github.io/docs/ejemplo/">Ejemplo Shortcodes</a>
     </li>
     
@@ -335,7 +339,8 @@
 
 </p>
 <p>A partir de una la silla mostrada anteriormente se presentará la manera de simular un corte con fresa de 6 mm CNC de 3 ejes en Fusion 360.</p>
-<h6 id="paso-1---creación-plancha-de-corte">Paso 1 - Creación plancha de corte</h6>
+<h4 id="mecanizado-de-patas-y-travesaños">Mecanizado de patas y travesaños</h4>
+<h4 id="paso-1---creación-plancha-de-corte">Paso 1 - Creación plancha de corte</h4>
 <p>Con la herramienta <strong>Create Sketch</strong> hacemos un cuadrado de <strong>1.220 mm</strong> por lado y extruimos la figura con un espesor de <strong>15mm</strong>, esta plancha de terciado será nuestra área de corte.</p>
 <p>Posteriormente copiamos las partes de la silla que querramos cortar.</p>
 <ul>
@@ -396,7 +401,7 @@
 
 
 </p>
-<h5 id="paso-2---elegir-herramienta-de-corte-y-área-a-mecanizar">Paso 2 - Elegir herramienta de corte y área a mecanizar</h5>
+<h4 id="paso-2---elección-herramienta-de-corte-y-área-a-mecanizar">Paso 2 - Elección herramienta de corte y área a mecanizar</h4>
 <p>Cambiamos el espacio de trabajo a <strong>manufactura</strong>, con la herramienta de <strong>set up</strong> escogemos la máquina para cortar, esta será una <strong>Autodesk CNC de 3 ejes genérica</strong>.</p>
 <p>Luego definiremos nuestra plancha construida en la pestaña de stock, stock from solid y seleccionaremos las piezas que queremos cortar.</p>
 <p>Finalmente el modelo de orientación a seleccionar será Select Z axis/plane &amp; X axis, definiremos en la tabla los que serán nuestros puntos Z (plano superior), X (lateral) y el punto de origen (punto superior izquierdo).</p>
@@ -457,6 +462,84 @@
     <source src="/img/final.mp4"  type="video/mp4">
     </video>
 </div>
+<h4 id="mecanizado-del-asiento">Mecanizado del asiento</h4>
+<ul>
+<li>Lo importante de está parte de la silla es la flexibilidad que se debe conseguir en base a recorte.</li>
+</ul>
+<h4 id="paso-1">Paso 1</h4>
+<p>Con la herramienta <strong>Create Sketch</strong> hacemos un y extruimos la figura con un espesor de <strong>15mm</strong>, esta plancha de terciado será nuestra área de corte.</p>
+<p>Cambiamos el espacio de trabajo a <strong>manufactura</strong> y hacemos un nuevo <strong>set up</strong>, seguiremos usando la misma máquina de corte. Al igual que con el mecanizado de las patas y travesaño el modelo de orientación a seleccionar será Select Z axis/plane &amp; X axis, definiremos en la tabla los que serán nuestros puntos Z (plano superior), X (lateral) y el punto de origen (punto superior izquierdo)</p>
+<p><img src="/img/asiento.png" alt="Imagen Simple"></p>
+<h4 id="paso-2---contour-2d">Paso 2 - Contour 2D</h4>
+<p>Realizamos un contour 2D a la pieza, escogeremos la Fresia que será la herramienta de corte, será una de <strong>6 mm flat end mill</strong>. Aparecerán entonces las líneas de la trayectoría de la fresia para mecanizar.</p>
+<p>Finalmente, agregaremos mayor profundidad en el corte en la sección Passes, Multiple Dephs, Maximum Roughning Stepdown de 3mm que sería la hondura del corte.</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/asiento2d.mp4"  type="video/mp4">
+    </video>
+</div>
+<h4 id="paso-3---trace">Paso 3 - Trace</h4>
+<p>Finalmente, con la herramienta Trace marcremos los trazos que se encuentran en la superficie de la silla sin llegar a una mayor profundidad de la pieza.</p>
+<ul>
+<li>Está herramienta brindará flexibilidad a la pieza.</li>
+</ul>
+<p>En la selección de Passes escogeremos en la opción Stock to Leave 4,5 mm de Radial stock to Leave
+
+
+
+<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://JaviAlma.github.io//img/Trace//Trace.1.png');" >
+				      <img itemprop="thumbnail" src="https://JaviAlma.github.io//img/Trace//Trace.1.png" alt="Trace" />
+				    </div>
+			      <figcaption>
+		          <p>Trace</p>
+			      </figcaption>
+				    <a href="https://JaviAlma.github.io//img/Trace//Trace.1.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://JaviAlma.github.io//img/Trace//Trace.2.png');" >
+				      <img itemprop="thumbnail" src="https://JaviAlma.github.io//img/Trace//Trace.2.png" alt="Trace" />
+				    </div>
+			      <figcaption>
+		          <p>Trace</p>
+			      </figcaption>
+				    <a href="https://JaviAlma.github.io//img/Trace//Trace.2.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://JaviAlma.github.io//img/Trace//Trace.3.png');" >
+				      <img itemprop="thumbnail" src="https://JaviAlma.github.io//img/Trace//Trace.3.png" alt="Trace" />
+				    </div>
+			      <figcaption>
+		          <p>Trace</p>
+			      </figcaption>
+				    <a href="https://JaviAlma.github.io//img/Trace//Trace.3.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+</div>
+ 
+
+
+</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/trace.mp4"  type="video/mp4">
+    </video>
+</div>
+<ul>
+<li>El mecanizado del respaldo se mostrará en el post de  <strong>Mecanizado 2.5 D Respaldo</strong></li>
+</ul>
 <p><a href="#contenido-shortcodes">[Volver Arriba]</a></p>
 
 </div>
