@@ -132,29 +132,42 @@
 <h1 class="title">3 - Mecanizado 2.5 D del respaldo silla</h1>
 <div class="content ">
   <h4 id="por-qué-se-habla-de-25-d">¿Por qué se habla de 2.5 D?</h4>
-<p>En el mecanizado, 2.5 D hace referncia a una superficie que es una <strong>proyección</strong> de un plano en tercera dimensión.A pesar de que el objeto es de 3 dimensiones, no hay elementos que sobresalgan posiblemente. Los objetos de este tipo se representan a menudo como un mapa de contorno que da la altura (es decir , el grosor o profundidad) del objeto en cada punto.</p>
+<p>En el mecanizado, 2.5 D hace referncia a una superficie que es una <strong>proyección</strong> de un plano en tercera dimensión.
+A pesar de que un objeto sea de 3 dimensiones, no hay elementos que posiblemente sobresalgan. Los objetos de este tipo se representan a menudo como un mapa de contorno que da la altura (es decir , el grosor o profundidad) del objeto en cada punto.</p>
 <p>Objetos 2.5D a menudo son preferidos para realizar un mecanizado, ya que posee mayor facilidad para generar trayectorias y programae el mecanizado.</p>
 <ul>
 <li>Objetos 2.5D se pueden mecanizar en una 3-eje máquina de fresado</li>
 </ul>
 <h4 id="mecanizado-del-respaldo">Mecanizado del respaldo</h4>
 <ul>
-<li>Para un mecanizado en 2.5 D debemos hacer un desbaste, luego un proceso de procesamiento en paralelo en 1 eje y luego en el otro con un step over nás bajo para tener una tener una terminación superficial mejor.</li>
+<li>Para un mecanizado en 2.5 D debemos hacer un <strong>desbaste</strong>, luego un proceso de <strong>procesamiento en paralelo en 1 eje</strong> y luego en el <strong>sentido contrario con un step over más bajo</strong> para tener una tener una mejor terminación superficial.</li>
 </ul>
+<div>
+    <iframe 
+    src="https://alumnos2152.autodesk360.com/shares/public/SH56a43QTfd62c1cd96896fbed4a88767676?mode=embed"  
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
+
 <h4 id="paso-1---sketch-alineación-set-up-y-proyección">Paso 1 - Sketch, alineación, set up y proyección</h4>
 <p>Acomodamos nuestra pieza del respaldo y la alineamos al plano. Creamos un sketch, generamos un rectángulo y lo extruimos de tal forma que la pieza del respaldo quede totalemtne dentro del bloque.</p>
 <p><img src="/img/respaldo.png" alt="Imagen Simple"></p>
-<p>Cambiamos el espacio de trabajo a <strong>manufactura</strong>, con la herramienta de <strong>set up</strong> escogemos la máquina para cortar, esta será una <strong>Autodesk CNC de 3 ejes genérica</strong>.</p>
+<p>Cambiamos el espacio de trabajo a <strong>manufactura</strong>, con la herramienta de <strong>set up</strong> escogeremos la máquina para cortar, esta será una <strong>Autodesk CNC de 3 ejes genérica</strong>.</p>
 <p>Luego definiremos nuestra plancha construida en la pestaña de stock, stock from solid y seleccionaremos las piezas que queremos cortar.</p>
 <p>Finalmente el modelo de orientación a seleccionar será Select Z axis/plane &amp; X axis, definiremos en la tabla los que serán nuestros puntos Z (plano superior), X (lateral) y el punto de origen (punto superior izquierdo).</p>
 <p>Seguiremos en el spacio de trabajo de diseño y realizaremos un nuevo sketch en el plano superor del stock, vamos a crear y proyectar este sketch, seleccionamos el Body del respaldo, lo finalizamos.</p>
 <p><img src="/img/design.png" alt="Imagen Simple"></p>
 <h4 id="paso-2---adaptative-cleaning">Paso 2 - Adaptative Cleaning</h4>
-<p>Nos vamos al espacio de trabajo de manufactura, seleccionamos la herramienta <strong>Adaptative Cleaning</strong> que nos ayudara a remover material de desbaste para optimizar el proceso.</p>
-<p>Seguiremos usando la misma fresia de 6mm pero en esta oportunidad editaremos el largo de su punta, por lo que editaremos la herramienta y en la sección de cutter nos iremos a la selección de Lengh below folder, aumentaremos el largo del cutter de 22.5 mm a 40 mm para que este pueda ser lo suficientemente largo para no chocar con el stock del mecanizado.</p>
+<p>Nos iremos al espacio de trabajo de manufactura, seleccionaremos la herramienta <strong>Adaptative Cleaning</strong> que nos ayudará a remover material de desbaste para optimizar el proceso.</p>
+<p>Seguiremos usando la misma fresia de 6mm pero en esta oportunidad modificaremos el largo de su punta, por lo que editaremos la herramienta y en la sección de cutter nos iremos a la selección de <strong>Lengh below folder</strong>, aumentaremos el largo del cutter de <strong>22.5 mm a 40 mm</strong> para que este pueda ser lo <strong>suficientemente largo para no chocar con el stock del mecanizado</strong>.</p>
 <p><img src="/img/cutter.png" alt="Imagen Simple"></p>
-<p>En la sección de geometría definiremos el área que proyectamos anteriormente con el último sketch y como modelo escogeremos el respaldo. Por último, en la sección de fasses bajamos el optimal load a 3mm.</p>
-<p>Se demorará en generar la simulación por la cantidad de trayectorias que se generrán, el software irá cortando por capas hasta remover todo lo necesario sin mayor prolijiidad.</p>
+<p>En la sección de geometría definiremos el área que proyectamos anteriormente con el último sketch y como modelo escogeremos el respaldo. Por último, en la sección de fasses <strong>bajamos el optimal load a 3mm</strong>.</p>
+<p>Se demorará en generar la simulación por la cantidad de trayectorias que se forman, el software irá cortando por capas hasta remover todo lo necesario sin mayor prolijiidad.</p>
 <p>
 <link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
 
@@ -263,10 +276,10 @@
     </video>
 </div>
 <h4 id="paso-3---terminación-paralela-y-perpendicular">Paso 3 - Terminación Paralela y Perpendicular</h4>
-<p>Iremos a la herramienta Parallel y utilizaremos la misma herramienta de corte que hemos usado hasta entonces. En la sección de geometría escogeremos el Machining Boundary (área máxima por donde se moverá l fresia) y seleccionaremos la misma área proyectada que utilizamos en los pasos anteiores.</p>
+<p>Iremos a la herramienta <strong>Parallel</strong> y utilizaremos la misma herramienta de corte que hemos usado hasta entonces. En la sección de geometría escogeremos el <strong>Machining Boundary</strong> (área máxima por donde se moverá l fresia) y seleccionaremos la misma área proyectada que utilizamos en los pasos anteiores.</p>
 <p>Como modelo volveremos a seleccionar el respaldo pero debemos deseleccionar en el espacio model la opción de Include Setup model.</p>
 <p><img src="/img/Paralell.png" alt="Imagen Simple"></p>
-<p>Ahora duplicaremos la terminación paralela que acabamos de crear y la editaremos con la única diferencia que en la sección Passes, en la opción Pass Direction le daremos 90 grados y un Stepover de 2mm para que de esta forma quede en sentido perpendicular.</p>
+<p>Ahora <strong>duplicaremos la terminación paralela</strong> que acabamos de crear y la editaremos con la única diferencia que en la sección Passes, en la opción Pass Direction le daremos <strong>90 grados y un Stepover de 2mm</strong> para que de esta forma quede en sentido perpendicular.</p>
 <p><img src="/img/paralell2.png" alt="Imagen Simple"></p>
 <ul>
 <li>Es necesario generar una terminación paralela y otra perpendicular para mayor optimización, es optativo utilizar para las terminaciones una fresia de punta redonda (Ball end Mill).</li>
