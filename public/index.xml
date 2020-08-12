@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fabricación Digital on Nombre Alumno</title>
+    <title>Fabricación Digital on Javiera Almanzar</title>
     <link>https://JaviAlma.github.io/</link>
-    <description>Recent content in Fabricación Digital on Nombre Alumno</description>
+    <description>Recent content in Fabricación Digital on Javiera Almanzar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Jun 2020 19:30:08 +1000</lastBuildDate>
@@ -27,6 +27,42 @@
       
       <guid>https://JaviAlma.github.io/docs/configuracion/</guid>
       <description>Tutorial de configuración básica del menú y otros elementos del tema.</description>
+    </item>
+    
+    <item>
+      <title>1 - Planimetrías</title>
+      <link>https://JaviAlma.github.io/docs/encargo-1/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://JaviAlma.github.io/docs/encargo-1/</guid>
+      <description>¿Qué es una planimetría?, ejemplo creado en Fusion 360</description>
+    </item>
+    
+    <item>
+      <title>2 - Mecanizado CNC</title>
+      <link>https://JaviAlma.github.io/docs/encargo-2/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://JaviAlma.github.io/docs/encargo-2/</guid>
+      <description>¿Qué es el mecanizado CNC?, ¿Para qué se utiliza?, videos ejemplificando el procedimiento de corte en Fusion 360.</description>
+    </item>
+    
+    <item>
+      <title>3 - Mecanizado 2.5 D del respaldo silla</title>
+      <link>https://JaviAlma.github.io/docs/encargo-3/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://JaviAlma.github.io/docs/encargo-3/</guid>
+      <description>Terminación de la silla Fresia la técnica de desbaste en CNC.</description>
+    </item>
+    
+    <item>
+      <title>4 - Experimentación recipiente para plantas</title>
+      <link>https://JaviAlma.github.io/docs/encargo-4/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://JaviAlma.github.io/docs/encargo-4/</guid>
+      <description>Uso del materiales orgánicos para cultivar</description>
     </item>
     
     <item>

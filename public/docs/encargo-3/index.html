@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>3 - Mecanizado 2.5 D del respaldo silla - Javiera Almanzar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://JaviAlma.github.io/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.df52c7c8fb17040fdfb216293b7a711034ee517647a54f8a626ea24f0382f02b.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://JaviAlma.github.io/"><img alt="Logo" src="/images/logo.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://JaviAlma.github.io/"><img alt="Logo" src="/images/logo.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Documentación</h4>
+  <ul>
+    
+    <li class="">
+      <a href="https://JaviAlma.github.io/docs/instalar-tema/">Instalar Tema</a>
+    </li>
+    
+    <li class="">
+      <a href="https://JaviAlma.github.io/docs/configuracion/">Configuración</a>
+    </li>
+    
+    <li class="">
+      <a href="https://JaviAlma.github.io/docs/encargo-1/">1 - Planimetrías</a>
+    </li>
+    
+    <li class="">
+      <a href="https://JaviAlma.github.io/docs/encargo-2/">2 - Mecanizado CNC</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://JaviAlma.github.io/docs/encargo-3/">3 - Mecanizado 2.5 D del respaldo silla</a>
+    </li>
+    
+    <li class="">
+      <a href="https://JaviAlma.github.io/docs/encargo-4/">4 - Experimentación recipiente para plantas</a>
+    </li>
+    
+    <li class="">
+      <a href="https://JaviAlma.github.io/docs/ejemplo/">Ejemplo Shortcodes</a>
+    </li>
+    
+    <li class="">
+      <a href="https://JaviAlma.github.io/docs/markdown/">Ejemplos Markdown</a>
+    </li>
+    
+    <li class="">
+      <a href="https://JaviAlma.github.io/docs/objetivos/">Objetivos del Curso</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">3 - Mecanizado 2.5 D del respaldo silla</h1>
+<div class="content ">
+  <h4 id="por-qué-se-habla-de-25-d">¿Por qué se habla de 2.5 D?</h4>
+<p>Existen 2 tipos de software CAM con diferencias notorias, aquellos que trabajan en 2D y los que también trabajan con 3D.</p>
+<ul>
+<li>
+<p>Los que trabajan con 2D son los que importan un archivo geométrico 2D y los recorridos de las herramientas están siempre al mismo nivel del eje Z.</p>
+</li>
+<li>
+<p>La suma de muchas trayectorias en 2D nos generarán un dibujo 3D el cual recibe el nombre de <strong>2.5 D</strong></p>
+</li>
+</ul>
+<p>En el mecanizado, 2.5 D hace referncia a una superficie que es una <strong>proyección</strong> de un plano en tercera dimensión.
+A pesar de que un objeto sea de 3 dimensiones, no hay elementos que posiblemente sobresalgan. Los objetos de este tipo se representan a menudo como un mapa de contorno que da la altura (es decir , el grosor o profundidad) del objeto en cada punto.</p>
+<p>Objetos 2.5D a menudo son preferidos para realizar un mecanizado, ya que posee mayor facilidad para generar trayectorias y programae el mecanizado.</p>
+<ul>
+<li>Objetos 2.5D se pueden mecanizar en una 3-eje máquina de fresado</li>
+</ul>
+<h4 id="mecanizado-del-respaldo">Mecanizado del respaldo</h4>
+<ul>
+<li>Para un mecanizado en 2.5 D debemos hacer un <strong>desbaste</strong>, luego un proceso de <strong>procesamiento en paralelo en 1 eje</strong> y luego en el <strong>sentido contrario con un step over más bajo</strong> para tener una tener una mejor terminación superficial.</li>
+</ul>
+<p>La operación de <strong>desbaste</strong> busca quitar la máxima cantidad de material en el menor tiempo posible hasta llegar casi a las medidas finales de la pieza. Si bien el mecanizado CNC nos permite usar poca intervención del operador es en caso de las terminación y pulido que se requerirá de un operador.</p>
+<div>
+    <iframe 
+    src="https://alumnos2152.autodesk360.com/shares/public/SH56a43QTfd62c1cd96896fbed4a88767676?mode=embed"  
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
+
+<h4 id="paso-1---sketch-alineación-set-up-y-proyección">Paso 1 - Sketch, alineación, set up y proyección</h4>
+<p>Acomodamos nuestra pieza del respaldo y la alineamos al plano. Creamos un sketch, generamos un rectángulo y lo extruimos de tal forma que la pieza del respaldo quede totalemtne dentro del bloque.</p>
+<p><img src="/img/respaldo.png" alt="Imagen Simple"></p>
+<p>Cambiamos el espacio de trabajo a <strong>manufactura</strong>, con la herramienta de <strong>set up</strong> escogeremos la máquina para cortar, esta será una <strong>Autodesk CNC de 3 ejes genérica</strong>.</p>
+<p>Luego definiremos nuestra plancha construida en la pestaña de stock, stock from solid y seleccionaremos las piezas que queremos cortar.</p>
+<p>Finalmente el modelo de orientación a seleccionar será Select Z axis/plane &amp; X axis, definiremos en la tabla los que serán nuestros puntos Z (plano superior), X (lateral) y el punto de origen (punto superior izquierdo).</p>
+<p>Seguiremos en el spacio de trabajo de diseño y realizaremos un nuevo sketch en el plano superor del stock, vamos a crear y proyectar este sketch, seleccionamos el Body del respaldo, lo finalizamos.</p>
+<p><img src="/img/design.png" alt="Imagen Simple"></p>
+<h4 id="paso-2---adaptative-cleaning">Paso 2 - Adaptative Cleaning</h4>
+<p>Nos iremos al espacio de trabajo de manufactura, seleccionaremos la herramienta <strong>Adaptative Cleaning</strong> que nos ayudará a remover material de desbaste para optimizar el proceso.</p>
+<p>Seguiremos usando la misma fresia de 6mm pero en esta oportunidad modificaremos el largo de su punta, por lo que editaremos la herramienta y en la sección de cutter nos iremos a la selección de <strong>Lengh below folder</strong>, aumentaremos el largo del cutter de <strong>22.5 mm a 40 mm</strong> para que este pueda ser lo <strong>suficientemente largo para no chocar con el stock del mecanizado</strong>.</p>
+<p><img src="/img/cutter.png" alt="Imagen Simple"></p>
+<p>En la sección de geometría definiremos el área que proyectamos anteriormente con el último sketch y como modelo escogeremos el respaldo. Por último, en la sección de fasses <strong>bajamos el optimal load a 3mm</strong>.</p>
+<p>Se demorará en generar la simulación por la cantidad de trayectorias que se forman, el software irá cortando por capas hasta remover todo lo necesario sin mayor prolijiidad.</p>
+<p>
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
+<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://JaviAlma.github.io//img/hoyo//AC.1.png');" >
+				      <img itemprop="thumbnail" src="https://JaviAlma.github.io//img/hoyo//AC.1.png" alt="A c" />
+				    </div>
+			      <figcaption>
+		          <p>A c</p>
+			      </figcaption>
+				    <a href="https://JaviAlma.github.io//img/hoyo//AC.1.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://JaviAlma.github.io//img/hoyo//AC.2.png');" >
+				      <img itemprop="thumbnail" src="https://JaviAlma.github.io//img/hoyo//AC.2.png" alt="A c" />
+				    </div>
+			      <figcaption>
+		          <p>A c</p>
+			      </figcaption>
+				    <a href="https://JaviAlma.github.io//img/hoyo//AC.2.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://JaviAlma.github.io//img/hoyo//AC.3.png');" >
+				      <img itemprop="thumbnail" src="https://JaviAlma.github.io//img/hoyo//AC.3.png" alt="A c" />
+				    </div>
+			      <figcaption>
+		          <p>A c</p>
+			      </figcaption>
+				    <a href="https://JaviAlma.github.io//img/hoyo//AC.3.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+</div>
+ 
+
+
+
+  
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="/js/load-photoswipe.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/hoyo.mp4"  type="video/mp4">
+    </video>
+</div>
+<h4 id="paso-3---terminación-paralela-y-perpendicular">Paso 3 - Terminación Paralela y Perpendicular</h4>
+<p>Iremos a la herramienta <strong>Parallel</strong> y utilizaremos la misma herramienta de corte que hemos usado hasta entonces. En la sección de geometría escogeremos el <strong>Machining Boundary</strong> (área máxima por donde se moverá l fresia) y seleccionaremos la misma área proyectada que utilizamos en los pasos anteiores.</p>
+<p>Como modelo volveremos a seleccionar el respaldo pero debemos deseleccionar en el espacio model la opción de Include Setup model.</p>
+<p><img src="/img/Paralell.png" alt="Imagen Simple"></p>
+<p>Ahora <strong>duplicaremos la terminación paralela</strong> que acabamos de crear y la editaremos con la única diferencia que en la sección Passes, en la opción Pass Direction le daremos <strong>90 grados y un Stepover de 2mm</strong> para que de esta forma quede en sentido perpendicular.</p>
+<p><img src="/img/paralell2.png" alt="Imagen Simple"></p>
+<ul>
+<li>Es necesario generar una terminación paralela y otra perpendicular para mayor optimización, es optativo utilizar para las terminaciones una fresia de punta redonda (Ball end Mill).</li>
+</ul>
+<p>
+
+
+<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://JaviAlma.github.io//img/paralels//p1.png');" >
+				      <img itemprop="thumbnail" src="https://JaviAlma.github.io//img/paralels//p1.png" alt="P1" />
+				    </div>
+			      <figcaption>
+		          <p>P1</p>
+			      </figcaption>
+				    <a href="https://JaviAlma.github.io//img/paralels//p1.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://JaviAlma.github.io//img/paralels//p2.png');" >
+				      <img itemprop="thumbnail" src="https://JaviAlma.github.io//img/paralels//p2.png" alt="P2" />
+				    </div>
+			      <figcaption>
+		          <p>P2</p>
+			      </figcaption>
+				    <a href="https://JaviAlma.github.io//img/paralels//p2.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://JaviAlma.github.io//img/paralels//p3.png');" >
+				      <img itemprop="thumbnail" src="https://JaviAlma.github.io//img/paralels//p3.png" alt="P3" />
+				    </div>
+			      <figcaption>
+		          <p>P3</p>
+			      </figcaption>
+				    <a href="https://JaviAlma.github.io//img/paralels//p3.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+</div>
+ 
+
+
+</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/encargo3.mp4"  type="video/mp4">
+    </video>
+</div>
+<h4 id="paso-4---cara-opuesta-respaldo">Paso 4 - Cara Opuesta Respaldo</h4>
+<p>Repetimos el mismo proceso de desbaste y procesamiento en la cara opuesta del bloque.</p>
+<p>
+
+
+<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://JaviAlma.github.io//img/opuesto//1.png');" >
+				      <img itemprop="thumbnail" src="https://JaviAlma.github.io//img/opuesto//1.png" alt="1st" />
+				    </div>
+			      <figcaption>
+		          <p>1st</p>
+			      </figcaption>
+				    <a href="https://JaviAlma.github.io//img/opuesto//1.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://JaviAlma.github.io//img/opuesto//2.png');" >
+				      <img itemprop="thumbnail" src="https://JaviAlma.github.io//img/opuesto//2.png" alt="2nd" />
+				    </div>
+			      <figcaption>
+		          <p>2nd</p>
+			      </figcaption>
+				    <a href="https://JaviAlma.github.io//img/opuesto//2.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://JaviAlma.github.io//img/opuesto//parallel1.png');" >
+				      <img itemprop="thumbnail" src="https://JaviAlma.github.io//img/opuesto//parallel1.png" alt="Parallel1" />
+				    </div>
+			      <figcaption>
+		          <p>Parallel1</p>
+			      </figcaption>
+				    <a href="https://JaviAlma.github.io//img/opuesto//parallel1.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://JaviAlma.github.io//img/opuesto//parallel2.png');" >
+				      <img itemprop="thumbnail" src="https://JaviAlma.github.io//img/opuesto//parallel2.png" alt="Parallel2" />
+				    </div>
+			      <figcaption>
+		          <p>Parallel2</p>
+			      </figcaption>
+				    <a href="https://JaviAlma.github.io//img/opuesto//parallel2.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+</div>
+ 
+
+
+</p>
+<p><img src="/img/simulfinal.png" alt="Imagen Simple"></p>
+<p><a href="#contenido-shortcodes">[Volver Arriba]</a></p>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.1237ff71925bb8625c97a9af8db4c54525258bedfd7c47493daaff723bea755e.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>
