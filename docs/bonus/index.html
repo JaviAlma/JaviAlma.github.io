@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Objetivos del Curso - Javiera Almanzar</title>
+  <title>Bonus - Mecanizado CNC Molde - Javiera Almanzar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://JaviAlma.github.io/favicon.png">
@@ -122,7 +122,7 @@
       <a href="https://JaviAlma.github.io/docs/encargo-5/">5- Modelación Molde para recipiente</a>
     </li>
     
-    <li class="">
+    <li class="active ">
       <a href="https://JaviAlma.github.io/docs/bonus/">Bonus - Mecanizado CNC Molde</a>
     </li>
     
@@ -130,7 +130,7 @@
       <a href="https://JaviAlma.github.io/docs/markdown/">Ejemplos Markdown</a>
     </li>
     
-    <li class="active ">
+    <li class="">
       <a href="https://JaviAlma.github.io/docs/objetivos/">Objetivos del Curso</a>
     </li>
     
@@ -141,19 +141,34 @@
         </div>
         <div class="col-12 col-md-9">
           
-<h1 class="title">Objetivos del Curso</h1>
+<h1 class="title">Bonus - Mecanizado CNC Molde</h1>
 <div class="content ">
-  <p>Objetivos general y específico de Fabricación Digital</p>
-<h3 id="objetivo-general">Objetivo General</h3>
-<ol>
-<li>Comprender y dominar una serie de estrategias de fabricación digital utilizando software CAD/CAM que permitan simular las principales técnicas contemporáneas.</li>
-</ol>
-<h3 id="objetivo-específicos">Objetivo Específicos</h3>
-<ol>
-<li>Comprender e implementar un flujo de trabajo CAD/CAM</li>
-<li>Integrar diversas estrategias de fabricación digital para la simulación de fabricación digital.</li>
-<li>Entender los software de diseño 3D desde una perspectiva de fabricación.</li>
-</ol>
+  <p><img src="/img/bonus/mold6.jpg" alt="Imagen Simple"></p>
+<h4 id="mecanizado-y-desbaste">Mecanizado y desbaste</h4>
+<p>A continuación se motrarán los pasos para mecanizar un molde con un patrón y sus profundidades</p>
+<h4 id="paso-1---creación-plancha-de-corte">Paso 1 - Creación plancha de corte</h4>
+<p>Importamos nuestro molde a Fusion 360°, lo alineamos al plano y realizamos una extrusión que cubra completamente el molde tal como se ha realizado con los otros mecanizados.</p>
+<p><em>Es necesario escalar el modelo en 0,5 para poder realizar el corte, de lo contrario no se podrá generar la simulación</em></p>
+<p><img src="/img/BONUS.png" alt="Imagen Simple"></p>
+<h4 id="paso-2---elección-herramienta-de-corte-y-área-a-mecanizar">Paso 2 - Elección herramienta de corte y área a mecanizar</h4>
+<p>Cambiamos el espacio de trabajo a <strong>manufactura</strong>, con la herramienta de <strong>set up</strong> escogeremos la máquina para cortar, esta será una <strong>Autodesk CNC de 3 ejes genérica</strong>.</p>
+<p>Luego definiremos nuestra plancha construida en la pestaña de stock, stock from solid y seleccionaremos las piezas que queremos cortar.</p>
+<p>Finalmente el modelo de orientación a seleccionar será Select Z axis/plane &amp; X axis, definiremos en la tabla los que serán nuestros puntos Z (plano superior), X (lateral) y el punto de origen (punto superior izquierdo).</p>
+<p>Seguiremos en el spacio de trabajo de diseño y realizaremos un nuevo sketch en el plano superor del stock, vamos a crear y proyectar este sketch, seleccionamos el Body del respaldo, lo finalizamos.</p>
+<p><img src="/img/BONUS2.png" alt="Imagen Simple">
+<img src="/img/BONUS3.png" alt="Imagen Simple"></p>
+<h4 id="paso-3---adaptive-clearing">Paso 3 - Adaptive Clearing</h4>
+<p>Nos iremos al espacio de trabajo de manufactura, seleccionaremos la herramienta <strong>Adaptative Cleaning</strong> que nos ayudará a remover material de desbaste para optimizar el proceso.</p>
+<p>Seguiremos usando la misma fresia de 6mm pero en esta oportunidad modificaremos el largo de su punta, por lo que editaremos la herramienta y en la sección de cutter nos iremos a la selección de <strong>Lengh below folder</strong>
+En la sección de geometría definiremos el área que proyectamos anteriormente con el último sketch y como modelo escogeremos el respaldo. Por último, en la sección de fasses <strong>bajamos el optimal load a 3mm</strong>.</p>
+<p>Se demorará en generar la simulación por la cantidad de trayectorias que se forman, el software irá cortando por capas hasta remover todo lo necesario sin mayor prolijiidad.</p>
+<p><img src="/img/bonus4.png" alt="Imagen Simple">
+<img src="/img/bonus5.png" alt="Imagen Simple"></p>
+<h4 id="paso-4---2d-contour">Paso 4 - 2D Contour</h4>
+<p>Seguiremos en el espacio de manufactura y realizaremos un 2D Contour el cual hará un corte en el molde para ello
+Aparecerán entonces las líneas de la trayectoría de la fresia para mecanizar.</p>
+<p><img src="/img/bonus6.png" alt="Imagen Simple"></p>
+<p><img src="/img/bonus7.png" alt="Imagen Simple"></p>
 
 </div>
 </div>
